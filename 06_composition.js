@@ -7,8 +7,11 @@
  *  - ne pas utiliser la méthode concat, map, merge, push
  *  - for, foreach, while, do while sont interdits
  */
+const tab1 = [1, 2, 3]
+const tab2 =  [4, 5, 6]
 
-const concat = null;
+let concat = (tab1,tab2) => concat = [...tab1,...tab2];
+console.log(concat[tab1,tab2]);
 
 /**
  * utiliser l'opérateur de composition ... afin d'ajouter un élément à un tableau
@@ -19,15 +22,21 @@ const concat = null;
  * - ne pas utiliser la méthode push
  */
 
-const push = null;
+const tab3 = [1, 2, 3]
+const number =  4
+
+let push= (tab3,number) => push=[...tab3,number];
+console.log(push(tab3,number));
 
 /**
  * utiliser l'opérateur de composition ... afin de fusionner 2 objets passés en paramètres
  * 
  * ex: {a: 1, b: 2}, {c: 3, d: 4} => {a: 1, b: 2, c: 3, d: 4}
  */
-
-const merge = null;
+const obj1 = {a: 1, b: 2}
+const obj2 = {c: 3, d: 4}
+let merge= (obj1,obj2) => merge = {...obj1,...obj2};
+console.log(merge(obj1,obj2));
 
 /**
  * utiliser l'opérateur de composition ... afin de modifier la propriété name de l'objet
@@ -37,8 +46,10 @@ const merge = null;
  * contrainte:
  *  - interdiction d'utiliser l'opérateur d'affectation "="
  */
+const obj3 = {name: 'toto'}
+let setName= (obj3) => setName = {...obj3}.name
 
-const setName = null;
+console.log(setName(obj3));
 
 // astuce: {...obj} crée une copie de l'objet, c'est un des principes de l'immutabilité et évite les problèmes de référence
 module.exports = {concat, push, merge, setName}
