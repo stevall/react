@@ -5,7 +5,12 @@
  * Contraintes:
  *    - utiliser l'opérateur ternaire (if interdit)
  */
-function ternaire(a , b) {
+function ternaryChain(a, b) {
+    let valeur = a > b ? ">" :
+        a < b ? "<" :
+            "="
+
+    return valeur
 }
 
 
