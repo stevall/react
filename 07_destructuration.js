@@ -12,7 +12,12 @@
  *  - interdiction d'utiliser slice ou splice
  */
 
-const extractFirstTwo = null;
+const tab1 = [1, 2, 3]
+let [a,b,...rest] = tab1;
+let extractFirstTwo = [a,b]
+
+console.log(extractFirstTwo);
+
 
 /**
  * utilisez la décomposition pour extraire la premiere case du tableau et le reste du tableau
@@ -21,7 +26,11 @@ const extractFirstTwo = null;
  * exemple: [1, 2, 3] => [2, 3]
  */
 
-const extractRest = null;
+const tab2 = [1, 2, 3]
+let [c,...rest1] = tab2;
+let extractRest = rest1
+
+console.log(extractRest);
 
 /**
  * utilisez la décomposition pour extraire le champ "name" de l'objet passé en paramètre
