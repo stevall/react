@@ -18,6 +18,6 @@ function ternaryChain(a, b) {
     return valeur
 }
 
-ternaryChain(4,5);
+console.log(ternaryChain(5,4));
 
 module.exports = ternaryChain;

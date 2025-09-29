@@ -11,7 +11,7 @@ let arrow1 = (argument) => {
     return argument+1;
 }
 
-arrow1(5);
+console.log(arrow1(5));
 
 /**
  * Déclarer une fonction fléchée qui renvoi l'argument + 1
@@ -24,6 +24,6 @@ arrow1(5);
 
 let arrow2 = (argument) => argument+1;
 
-arrow2(3);
+console.log(arrow2(3));
 
 module.exports = {arrow1, arrow2};

@@ -5,7 +5,7 @@
  * Contraintes:
  *    - utiliser l'opérateur ternaire (if interdit)
  */
-function ternaryChain(a, b) {
+function ternaire(a, b) {
     let valeur = a > b ? a :
         a < b ? b :
             "="
@@ -13,6 +13,6 @@ function ternaryChain(a, b) {
     return valeur
 }
 
-ternaryChain(4,5);
+console.log(ternaire(4,5));
 
 module.exports = ternaire;
