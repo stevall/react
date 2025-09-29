@@ -13,4 +13,6 @@ const nom = "Doe";
 const prenom = "John";
 
 let concatName = (nom, prenom) => ` ${nom} ${prenom} ` ;
-console.log(concatName(nom,prenom))
+console.log(concatName("Doe","John"))
+
+module.exports = {concatName};
