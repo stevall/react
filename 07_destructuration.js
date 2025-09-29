@@ -30,7 +30,9 @@ const tab2 = [1, 2, 3]
 let [c,...rest1] = tab2;
 let extractRest = rest1
 
-console.log(extractRest);
+const extract = ([ ,...rest]) => rest
+
+console.log(extract(tab2));
 
 /**
  * utilisez la décomposition pour extraire le champ "name" de l'objet passé en paramètre
@@ -43,8 +45,9 @@ console.log(extractRest);
  * contrainte:
  * - interdiction d'utiliser l'opérateur "." pour accéder au champ "name"
  */
-
-const extractName = null;
+const objet = {name: "toto", age: 42}
+const extractName = ({name}) => name;
+console.log(extractName(objet));
 
 /**
  * utilisez la décomposition pour retourner l'objet utilisateur sans le champ "password"
@@ -56,7 +59,8 @@ const extractName = null;
  *    - interdiction d'utiliser l'opérateur "." pour accéder au champ "password"
  * 
  */
-
-const removePassword = null;
+const objet1 = {name: "toto", password: "1234"}
+const removePassword = ({password,...rest}) => rest;
+console.log(removePassword(objet1));
 
 module.exports = {extractFirstTwo, extractRest, extractName, removePassword}
