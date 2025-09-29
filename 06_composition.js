@@ -10,8 +10,9 @@
 const tab1 = [1, 2, 3]
 const tab2 =  [4, 5, 6]
 
-let concat = (tab1,tab2) => concat = [...tab1,...tab2];
-console.log(concat[tab1,tab2]);
+let concat = (tab1,tab2) => ([...tab1,...tab2]);
+
+console.log(concat(tab1,tab2));
 
 /**
  * utiliser l'opérateur de composition ... afin d'ajouter un élément à un tableau
@@ -25,7 +26,7 @@ console.log(concat[tab1,tab2]);
 const tab3 = [1, 2, 3]
 const number =  4
 
-let push= (tab3,number) => push=[...tab3,number];
+let push= (tab3,number) => ([...tab3,number]);
 console.log(push(tab3,number));
 
 /**
@@ -35,7 +36,7 @@ console.log(push(tab3,number));
  */
 const obj1 = {a: 1, b: 2}
 const obj2 = {c: 3, d: 4}
-let merge= (obj1,obj2) => merge = {...obj1,...obj2};
+let merge= (obj1,obj2) => ({...obj1,...obj2});
 console.log(merge(obj1,obj2));
 
 /**
@@ -46,10 +47,10 @@ console.log(merge(obj1,obj2));
  * contrainte:
  *  - interdiction d'utiliser l'opérateur d'affectation "="
  */
-const obj3 = {name: 'toto'}
-let setName= (obj3) => setName = {...obj3}.name
+const obj = {name: 'toto'}
+let setName = (obj, name) => ({...obj, name : name})
 
-console.log(setName(obj3));
+console.log(setName (obj,'titi').name);
 
 // astuce: {...obj} crée une copie de l'objet, c'est un des principes de l'immutabilité et évite les problèmes de référence
 module.exports = {concat, push, merge, setName}
