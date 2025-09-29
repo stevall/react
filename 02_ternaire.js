@@ -13,5 +13,6 @@ function ternaryChain(a, b) {
     return valeur
 }
 
+ternaryChain(4,5);
 
 module.exports = ternaire;
