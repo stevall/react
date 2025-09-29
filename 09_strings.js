@@ -9,4 +9,8 @@
  *  - ne pas utiliser la fonction concat de String
  */
 
-const concat = null;
+const nom = "Doe";
+const prenom = "John";
+
+let concatName = (nom, prenom) => ` ${nom} ${prenom} ` ;
+console.log(concatName(nom,prenom))
