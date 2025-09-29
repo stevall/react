@@ -6,8 +6,8 @@
  *    - utiliser l'opérateur ternaire (if interdit)
  */
 function ternaryChain(a, b) {
-    let valeur = a > b ? ">" :
-        a < b ? "<" :
+    let valeur = a > b ? a :
+        a < b ? b :
             "="
 
     return valeur
