@@ -5,5 +5,14 @@
  * utilisez new Promise
  */
 
-const sleep = null;
+const sleep = (ms) => new Promise (resolve => setTimeout(resolve, ms));
+
+const asyncFunc = async () => {
+    console.log("Début")
+    await sleep(2000)
+    console.log("Fin")
+}
+
+asyncFunc();
+
 module.exports = {sleep};
